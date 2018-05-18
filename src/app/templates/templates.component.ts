@@ -18,7 +18,6 @@ export class TemplatesComponent implements OnInit {
   }
   
   getTemplates(): void {
-    this.templateService.getTemplates().subscribe();
+    this.templateService.getTemplates().subscribe(templates => this.templates = templates);
   }
-
 }

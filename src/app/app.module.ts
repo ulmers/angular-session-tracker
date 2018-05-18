@@ -7,8 +7,7 @@ import { TemplatesComponent } from './templates/templates.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TemplatesComponent,
-    TemplateComponent
+    TemplatesComponent
   ],
   imports: [
     BrowserModule
