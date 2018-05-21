@@ -1,6 +1,30 @@
 <h2>Templates</h2>
 <ul>
   <li *ngFor="let template of templates">
-    {{template.name}}
+    {{template.name}} created by {{template.creatorId}}
+    <ul>
+      <li *ngFor="let section of template.sections">
+        {{section.name}} - {{section.desc}}
+        <ul>
+          <li *ngFor="let exercise of section.exercises">
+            {{exercise.name}}
+              <ul>
+                <li *ngFor="let option of exercise.options">
+                  {{option.name}}
+                </li>
+                <li>
+                New Option
+                </li>
+              </ul>
+          </li>
+          <li>
+          New Exercise
+          </li>
+        </ul>
+      </li>
+      <li>
+      New Section
+      </li>
+    </ul>
   </li>
 </ul>
