@@ -1,7 +1,7 @@
 import { Section } from './section';
 
 export class Template {
-  id: number;
+  id: string;
   name: string;
   desc: string;
   creatorId: number;

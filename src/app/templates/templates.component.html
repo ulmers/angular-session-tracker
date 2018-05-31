@@ -12,19 +12,19 @@
                 <li *ngFor="let option of exercise.options">
                   {{option.name}}
                 </li>
-                <li>
+                <button (click)="newOption(exercise.name, section.name, template.id)">
                 New Option
-                </li>
+                </button>
               </ul>
           </li>
-          <li>
+          <button (click)="newExercise(section.name, template.id)">
           New Exercise
-          </li>
+          </button>
         </ul>
       </li>
-      <li>
+      <button (click)="newSection(template.id)">
       New Section
-      </li>
+      </button>
     </ul>
   </li>
 </ul>

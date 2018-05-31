@@ -4,16 +4,16 @@ import { Exercise } from './exercise';
 import { Option } from './option';
 
 export const TEMPLATES: Template[] = [
-  { id: 1, 
+  { id: '1', 
     name: 'Test1', 
     desc:  '',
     creatorId: 123,
     sections: [
-      { name: "Max Effort Lift",
-        desc: "Max out boi",
+      { name: 'Max Effort Lift',
+        desc: 'Max out boi',
         shouldSuperset: false,
         exercises: [
-          { name: "Lift Options",
+          { name: 'Lift Options',
             options: [
               { name: 'Flat Bench Press',
                 desc: '',
@@ -26,7 +26,7 @@ export const TEMPLATES: Template[] = [
        }
     ]
   },
-  { id: 2, 
+  { id: '2', 
     name: 'Test2',
     desc:  '',
     creatorId: 123,
