@@ -13,6 +13,8 @@ import { TemplateService } from '../template.service';
 })
 export class TemplatesComponent implements OnInit {
   templates: Template[];
+  
+  isEditing: false;
 
   constructor(private templateService: TemplateService) { }
 
@@ -25,20 +27,40 @@ export class TemplatesComponent implements OnInit {
   }
   
   newOption(exerciseName: string, sectionName: string, templateId: string): void {
-    this.templateService.addOption( new Option(),
+    
+    var opt = new Option();
+    opt.name = 'New Option';
+    opt.desc = 'Add Option Description...';
+    opt.setRange = [0,0];
+    opt.repRange = [0,0];
+    
+    this.templateService.addOption( opt,
                                     exerciseName, 
                                     sectionName, 
                                     templateId);
   }
   
   newExercise(sectionName: string, templateId: string): void {
-    this.templateService.addExercise( new Exercise(),
+    
+    var exer = new Exercise();
+    exer.name = 'New Exercise';
+    exer.options = new Array<Option>();
+    
+    this.templateService.addExercise( exer,
                                       sectionName,
                                       templateId);
   }
   
   newSection(templateId: string): void {
-    this.templateService.addSection( new Section(),
-                                     templateId);
+    
+    var sec = new Section();
+    
+    sec.name = 'New Section';
+    sec.desc = 'Add a description...';
+    sec.shouldSuperset = false;
+    sec.exercises = new Array<Exercise>();
+    
+    this.templateService.addSection(sec,
+                                    templateId);
   }
 }

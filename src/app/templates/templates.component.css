@@ -1,0 +1,18 @@
+.new-option {
+  background-color: aqua;
+  display: none;
+}
+
+.new-exercise {
+  background-color: aqua;
+  display: none;
+}
+
+.new-section {
+  background-color: aqua;
+  display: none;
+}
+
+.editing {
+  display: inline;
+}
